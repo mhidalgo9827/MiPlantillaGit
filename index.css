@@ -119,3 +119,66 @@ footer {
     }
   }
   
+  /* Estilos para la sección de documentos */
+
+  .docus-container {
+    display: flex;
+    flex-direction: row; /* Asegura que los elementos se alineen horizontalmente */
+    flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .docus-left {
+    flex: 0 0 50%;
+    width: 50%;
+    max-width: 50%;
+    /*border: #3498db 2px solid;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    padding: 15px;
+  }
+  
+  
+  .docus-right {
+    flex: 0 0 50%;
+    width: 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra verticalmente */
+    /*border: #3498db 2px solid;*/
+  }
+  
+  
+  .mandalorian-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    /*border: #3498db 2px solid;*/
+    object-fit: contain;
+  }
+  
+  
+  .mandalorian-text {
+    margin-top: 10px;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Responsive design para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .docus-container {
+      flex-direction: column;
+    }
+    
+    .docus-left,
+    .docus-right {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  
