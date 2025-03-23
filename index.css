@@ -1,184 +1,182 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f9;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f9;
+  padding: 20px;
 }
 
 /* Header Section */
 header {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 header h1 {
-    font-size: 2.5em;
-    color: #2c3e50;
+  font-size: 2.5em;
+  color: #2c3e50;
 }
 
 header p {
-    font-size: 1.2em;
-    color: #7f8c8d;
+  font-size: 1.2em;
+  color: #7f8c8d;
 }
 
 /* Main Content */
 main {
-    max-width: 800px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Section Titles */
 section h2 {
-    font-size: 1.8em;
-    color: #34495e;
-    margin-bottom: 10px;
-    /*border-bottom: 2px solid #3498db;*/
-    border-top: 2px solid #3498db;
-    padding-bottom: 5px;
+  font-size: 1.8em;
+  color: #34495e;
+  margin-bottom: 10px;
+  /*border-bottom: 2px solid #3498db;*/
+  border-top: 2px solid #3498db;
+  padding-bottom: 5px;
 }
 
 /* Education Section */
 .education ul {
-    list-style: none;
-    margin: 10px 0;
+  list-style: none;
+  margin: 10px 0;
 }
 
 .education li {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .education li h3 {
-    font-size: 1.2em;
-    color: #2c3e50;
+  font-size: 1.2em;
+  color: #2c3e50;
 }
 
 .education li p {
-    font-size: 0.9em;
-    color: #7f8c8d;
+  font-size: 0.9em;
+  color: #7f8c8d;
 }
 
 /* Skills Section */
 .skills ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .skills li {
-    background: #3498db;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9em;
+  background: #3498db;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #7f8c8d;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #7f8c8d;
 }
 
 .profile {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #3498db;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+/* Estilos para la sección de documentos */
+
+.docus-container {
+  display: flex;
+  flex-direction: row; /* Asegura que los elementos se alineen horizontalmente */
+  flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
+  gap: 20px;
+  width: 100%;
+  /*border: #db3434 2px solid;*/
+}
+
+.docus-left {
+  flex: 0 0 50%;
+  width: 50%;
+  max-width: 50%;
+  /*border: #3498db 2px solid;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente el contenido */
+  padding: 15px;
+}
+
+.docus-right {
+  flex: 0 0 50%;
+  width: 50%;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centra verticalmente */
+  /*border: #3498db 2px solid;*/
+}
+
+.mandalorian-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  /*border: #3498db 2px solid;*/
+  object-fit: contain;
+}
+
+.mandalorian-text {
+  margin-top: 10px;
+  font-style: italic;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Responsive design para pantallas pequeñas */
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
   }
-  
-  .profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #3498db;
-  }
-  
-  .profile-info {
-    flex: 1;
-  }
-  
-  @media (max-width: 768px) {
-    .profile {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
-  
-  /* Estilos para la sección de documentos */
 
   .docus-container {
-    display: flex;
-    flex-direction: row; /* Asegura que los elementos se alineen horizontalmente */
-    flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
-    gap: 20px;
-    width: 100%;
-  }
-  
-  .docus-left {
-    flex: 0 0 50%;
-    width: 50%;
-    max-width: 50%;
-    /*border: #3498db 2px solid;*/
-    display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra verticalmente el contenido */
-    padding: 15px;
   }
-  
-  
+
+  .docus-left,
   .docus-right {
-    flex: 0 0 50%;
-    width: 50%;
-    max-width: 50%;
-    display: flex;
-    flex-direction: column;
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
     align-items: center;
     justify-content: center; /* Centra verticalmente */
-    /*border: #3498db 2px solid;*/
   }
-  
-  
-  .mandalorian-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    /*border: #3498db 2px solid;*/
-    object-fit: contain;
-  }
-  
-  
-  .mandalorian-text {
-    margin-top: 10px;
-    font-style: italic;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  /* Responsive design para pantallas pequeñas */
-  @media (max-width: 768px) {
-    .docus-container {
-      flex-direction: column;
-    }
-    
-    .docus-left,
-    .docus-right {
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
-  }
-  
+}
