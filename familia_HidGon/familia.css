@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fefae0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #f4a261;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  section {
+    padding: 1.5rem;
+  }
+  
+  .info, .actividades {
+    background-color: #fff;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  h1, h2 {
+    margin-top: 0;
+  }
+  
+  ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+  }
+  
+  footer {
+    background-color: #264653;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
