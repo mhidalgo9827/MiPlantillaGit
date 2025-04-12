@@ -1,31 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" href="./assets/favicon-CN5pTIht.ico" type="image/x-icon" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Certum Folder</title>
-  <script type="module" crossorigin src="./assets/index-Prl5jOCT.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Cjk_K3DZ.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Certum Folder</h1>
-    <p>Registro de propiedad intelectual mediante hash y blockchain</p>
-    <p>Version demo NO inscribe nada.Aun...</p>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./assets/favicon-CN5pTIht.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certum Folder</title>
+    <script type="module" crossorigin src="./assets/index-BgKzws_G.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-ZDQhQ7WP.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Certum Folder</h1>
+      <p>Registro de propiedad intelectual mediante hash y blockchain</p>
+      <p>
+        Este registro es simulado, solo pretende presentar los pasos del
+        proceso.
+      </p>
+      <p>
+        Hay una recomendación sobre el contenido del archivo a registrar.
+        Archivo comprimido .zip,.rar etc, archivos generales, readme.txt ,
+        content.txt, intro.pdf, etc Carpeta pública, contenido visible para
+        todos. Carpeta privada con archivos encriptados, firmados, archivos
+        propietarios.
+      </p>
+      <p>Anotaciones:</p>
+      <p>
+        Descarga de un documento con Datos de registro y QR para verificación.
+      </p>
+      <div id="archivo-proceso">
+        <h2>📂 Cargar y procesar archivo</h2>
+        <input type="file" id="fileInput" />
 
-    <input type="file" id="fileInput" />
-    <button id="processButton">Procesar archivo</button>
+        <!-- Campo para mostrar el hash calculado -->
+        <div id="hashOutputContainer" class="hidden">
+          <p><strong>Hash SHA-512:</strong></p>
+          <textarea
+            id="hashOutput"
+            readonly
+            rows="3"
+            style="width: 100%"
+          ></textarea>
+        </div>
 
-    <div id="results" class="hidden">
-      <h2>Resultado</h2>
-      <p><strong>Hash SHA-256:</strong> <span id="hashOutput"></span></p>
-      <p><strong>Firma:</strong> <span id="signatureOutput"></span></p>
-      <p><strong>Tx ID:</strong> <span id="txidOutput"></span></p>
-      <p><strong>Fecha:</strong> <span id="timestampOutput"></span></p>
+        <button id="processButton" class="hidden">Registrar archivo</button>
+      </div>
+
+      <div id="keyGenResults" class="hidden">
+        <p><strong>Clave privada (64 bytes):</strong></p>
+        <textarea
+          id="generatedPrivateKey"
+          readonly
+          rows="3"
+          style="width: 100%"
+        ></textarea>
+
+        <p><strong>Clave pública (32 bytes):</strong></p>
+        <textarea
+          id="generatedPublicKey"
+          readonly
+          rows="2"
+          style="width: 100%"
+        ></textarea>
+        <button id="ClavesGeneradasToFile">Descargar claves</button>
+      </div>
+
+      <!-- Zona para mostrar los resultados -->
+      <div id="results" class="hidden">
+        <p><strong>Hash SHA-512:</strong></p>
+        <textarea
+          id="hashOutput2"
+          readonly
+          rows="3"
+          style="width: 100%"
+        ></textarea>
+        <p><strong>Firma:</strong> <span id="signatureOutput"></span></p>
+        <p>
+          <strong>Clave pública:</strong> <span id="publicKeyOutput"></span>
+        </p>
+        <p><strong>TxID:</strong> <span id="txidOutput"></span></p>
+        <p><strong>Fecha:</strong> <span id="timestampOutput"></span></p>
+        <!-- Nuevo botón para exportar los resultados a un archivo -->
+        <button id="exportButton">Exportar a resguardo.txt</button>
+      </div>
     </div>
-  </div>
-
-
-</body>
+    <h2>🔐 Generar nuevas claves</h2>
+    <button id="generarParClaves" onclick="generarParDeClaves()">
+      Generar claves
+    </button>
+  </body>
 </html>
